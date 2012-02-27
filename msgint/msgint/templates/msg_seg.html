@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Segmentation</title>
+	<link href="/static/main.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="wrapper">
+		<div id="top">
+			<div class="ctrl">
+				<a href="/">Back</a>
+			</div>
+			<h3 class="title">Segmentation</h3>
+		</div>
+		<div id="content">
+			<div class="seg">	
+				<h3>Content</h3>
+				<div>{{ content }}</div>
+			</div>
+			<div class="seg">
+				<h3>Smallseg</h3>
+				<div>{{ smallseg }}</div>
+			</div>
+			<div class="seg">
+				<h3>SCWS</h3>
+				<div>{{ scws }}</div>
+			</div>
+			<div class="seg">
+				<h3>Pymmseg</h3>
+				<div>{{ mmseg }}</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

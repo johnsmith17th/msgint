@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Add Sample Message</title>
+	<link href="/static/main.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="wrapper">
+		<div id="top">
+			<div class="ctrl">
+				<a href="/">Back</a>
+			</div>
+			<h3 class="title">Add Sample Message</h3>
+		</div>
+		<div id="content">
+			{% if errors %}
+			<ul class="err">
+				{% for item in errors %}
+				<li>{{ item }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+			<form class="form" action="" method="POST">
+				{% csrf_token %}   
+				<div class="row">
+					<label class="label" for="content">Content</label>
+					<textarea class="msg_content_txt" name="content" rows="20" cols="100"></textarea>
+				</div>
+				<div class="row">
+					<label class="label" for="tag">Category</label>
+					<input id="tag_spam" type="radio" name="tag" value="*" checked="checked" />
+					<label for="tag_spam">Spam</label>
+					<input id="tag_normal" type="radio" name="tag" value="+" />
+					<label for="tag_normal">Normal</label>
+				</div>
+				<div class="row">
+					<input class="submit" type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
